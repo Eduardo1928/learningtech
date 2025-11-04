@@ -44,54 +44,13 @@
 
 
 
-.logo-img {
-  display: block;       /* para que se comporte como bloque y podamos centrarlo */
-  margin: 0 auto 10px;  /* centra horizontalmente y separa un poco del texto de abajo */
-  width: 120px;         /* ajusta al tamaño que quieras */
-  height: auto;         /* mantiene la proporción */
-  border-radius: 20px;  /* bordes redondeados, cambia el número según lo redondeado que quieras */
-}
-
-
-
-
-
-
-
-
-/* Contenedor del PDF en la sección Recursos */
-#recursos .pdf-box {
-  max-width: 400px;      /* ancho del recuadro */
-  margin: 20px auto;     /* centrado horizontal y espacio arriba/abajo */
-  padding: 20px;         /* espacio interno */
-  border: 2px solid #333; /* borde del recuadro */
-  border-radius: 15px;   /* bordes redondeados */
-  background-color: #f9f9f9; /* color de fondo */
-  text-align: center;    /* centra el texto dentro del recuadro */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* sombra suave */
-}
-
-/* Título dentro del recuadro */
-#recursos .pdf-box h2 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  color: #222;
-}
-
-/* Botón para el PDF */
-#recursos .pdf-box .pdf-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #0077cc; /* color de botón */
-  color: #fff;
-  text-decoration: none;
-  border-radius: 10px;   /* bordes del botón redondeados */
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-#recursos .pdf-box .pdf-btn:hover {
-  background-color: #005fa3; /* cambio de color al pasar el mouse */
+.logo-container img {
+    display: block;        /* convierte la imagen en bloque */
+    margin-left: auto;     /* centra horizontalmente */
+    margin-right: auto;    /* centra horizontalmente */
+    border-radius: 15px;   /* bordes redondeados */
+    width: 150px;          /* ajusta según quieras el tamaño */
+    height: auto;          /* mantiene proporción */
 }
 
 
@@ -107,34 +66,67 @@
 
 
 
-/* Contenedor del carrusel */
-.marca-carousel {
-  width: 100%;
-  overflow: hidden; /* oculta las partes que se salen */
-  background-color: #f0f0f0;
-  padding: 10px 0;
-  border-radius: 15px; /* bordes redondeados del contenedor */
-  margin-bottom: 30px; /* espacio debajo del carrusel */
+.pdf-container {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #2d77cc;
 }
 
-/* Track que se mueve */
-.carousel-track {
-  display: flex;
-  width: calc(200%);
-  animation: scroll 15s linear infinite;
+.pdf-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
 }
 
-/* Imágenes dentro del carrusel */
-.carousel-track img {
-  width: 150px;   /* tamaño de las imágenes */
-  margin: 0 20px; /* espacio entre ellas */
-  border-radius: 20px; /* bordes redondeados de las imágenes */
+.pdf-button:hover {
+    background-color: #0056b3;
 }
 
-/* Animación */
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+
+
+
+
+
+
+
+
+
+
+
+
+.marcas-carrusel {
+    overflow: hidden;
+    margin: 30px auto; /* espacio arriba y abajo */
+    border-radius: 15px; /* bordes redondeados */
+    max-width: 800px;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.marcas-track {
+    display: flex;
+    width: calc(200%); /* duplicado para animación infinita */
+    animation: scrollMarcas 20s linear infinite;
+}
+
+.marcas-track img {
+    width: 150px; /* tamaño de cada marca */
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+@keyframes scrollMarcas {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 
@@ -1128,8 +1120,8 @@
 
 
 
-<div class="header">
-  <img src="C:\Users\Eduar\OneDrive\Documentos\fotos pag web\LT.PNG" alt="Logo" class="logo-img">
+<div class="logo-container">
+    <img src="images\logo.png" alt="Logo">
 </div>
 
 
@@ -1161,20 +1153,15 @@
 
 
 
-<!-- Carrusel de marcas -->
-<div class="marca-carousel">
-  <div class="carousel-track">
-    <img src="C:\Users\Eduar\OneDrive\Documentos\fotos pag web\Photoroom_20251104_164433.PNG" alt="Marca 1">
-    <img src="C:\Users\Eduar\OneDrive\Documentos\fotos pag web\Photoroom_20251104_164456.PNG" alt="Marca 2">
-    <img src="C:\Users\Eduar\OneDrive\Documentos\fotos pag web\Photoroom_20251104_164521.PNG" alt="Marca 3">
-    <img src="C:\Users\Eduar\OneDrive\Documentos\fotos pag web\Photoroom_20251104_164537.PNG" alt="Marca 4">
-    <!-- Repetimos las mismas para que el movimiento sea continuo -->
-    <img src="C:\Users\Eduar\OneDrive\Documentos\fotos pag web\Photoroom_20251104_164433.PNG" alt="Marca 1">
-    <img src="C:\Users\Eduar\OneDrive\Documentos\fotos pag web\Photoroom_20251104_164456.PNG" alt="Marca 2">
-    <img src="C:\Users\Eduar\OneDrive\Documentos\fotos pag web\Photoroom_20251104_164521.PNG" alt="Marca 3">
-    <img src="C:\Users\Eduar\OneDrive\Documentos\fotos pag web\Photoroom_20251104_164537.PNG" alt="Marca 4">
-  </div>
+<div class="marcas-carrusel">
+    <div class="marcas-track">
+        <img src="images/marca1.png" alt="Marca 1">
+        <img src="images/marca2.png" alt="Marca 2">
+        <img src="images/marca3.png" alt="Marca 3">
+        <img src="images/marca4.png" alt="Marca 4">
+    </div>
 </div>
+
 
 
 
@@ -1328,13 +1315,10 @@
 
 
 
-<!-- Sección Recursos -->
-<section id="recursos">
-  <div class="pdf-box">
-    <h2>Aprende qué es la tecnología</h2>
-    <a href="C:\Users\Eduar\OneDrive\Documentos\fotos pag web\La Tecnología y su Importancia en el Mundo Actual.pdf.pdf" class="pdf-btn" target="_blank">Aprende aquí</a>
-  </div>
-</section>
+<div class="pdf-container">
+    <h3>Aprende qué es la tecnología</h3>
+    <a href="pdfs/tecnologia.pdf.pdf" target="_blank" class="pdf-button">Aprende aquí</a>
+</div>
 
 
 
